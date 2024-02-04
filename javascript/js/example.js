@@ -1,23 +1,25 @@
  //Even Numbers
  const numberArray = [1,2,4,6,7,8,9];
- var Evennumber=[];
+  let evenNumber=0;
+
 for(let i=0; i< numberArray.length; i++){
   
   if(numberArray[i]%2===0){
-  Evennumber.push(numberArray[i]);
+    evenNumber+=1;
+    
   }
 }
-alert(Evennumber);
+alert(evenNumber);
+
+
 //primeNumber
-let number=5;
-primeNumber(5);
-function primeNumber(number){
- //let number= document.querySelector("#prime");
- //alert(number);
-if(number<0){
+
+function primeNumber(){
+ let number= document.getElementById("prime").value
+ if(number<0){
   alert("Enter Positive Number")
  }
- else if(number===0 || number===1){
+ else if(number==0 || number==1){
  alert("0 and 1 are not prime numbers")
  }
  else if(number>1){
@@ -26,12 +28,15 @@ if(number<0){
         isPrime = false;
         break;
     }
+    else {
+      isPrime = true;
+    }
 }
 
-if (isPrime) {
-   console.log(`${number} is a prime number`);
+if (isPrime==true) {
+   alert(`${number} is a prime number`);
 } else {
-  console.log(`${number} is a not prime number`);
+  alert(`${number} is a not prime number`);
 }
  }
 }
